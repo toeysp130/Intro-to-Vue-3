@@ -55,12 +55,12 @@ app.component('product-display', {
     }
   },
   methods: {
-      addToCart() {
-          this.cart += 1
-      },
-      updateVariant(index) {
-          this.selectedVariant = index
-      }
+        addToCart(){
+            this.$emit('add-to-cart')
+        },
+        updateVariant(index) {
+            this.selectedVariant = index
+        }
   },
   computed: {
       title() {
